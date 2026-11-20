@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+@import '@fontsource/ibm-plex-sans-arabic/400.css';
+@import '@fontsource/ibm-plex-sans-arabic/500.css';
+@import '@fontsource/ibm-plex-sans-arabic/700.css';
+
+@theme {
+  --font-sans: 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif;
+  --color-cream: #faf6ef;
+  --color-sand: #efe7d9;
+  --color-line: #e2d8c6;
+  --color-forest: #2f5d50;
+  --color-forest-dark: #234539;
+  --color-clay: #c96f45;
+  --color-ink: #2b2a27;
+  --color-muted: #7a7468;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+input[type='range'] {
+  accent-color: var(--color-forest);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body,
+  html,
+  #root {
+    height: auto;
+    background: #fff;
+  }
+  .print-sheet {
+    box-shadow: none !important;
+    border: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+  }
+}
